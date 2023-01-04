@@ -1,5 +1,9 @@
 * { box-sizing: border-box; }
 
+.app {
+    margin: 25px;
+}
+
 .container {
     display: flex;
     justify-content: space-around;
