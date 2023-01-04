@@ -96,6 +96,11 @@ function App() {
 
     return (
         <div className="app">
+
+            <div className="app-title">
+                React calculator
+            </div>
+
             <div className="container">
                 <div className="calculator">
                     {/* Small display where current formula is displayed */}

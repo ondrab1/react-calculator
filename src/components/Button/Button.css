@@ -1,29 +1,21 @@
 button {
-  background-color: #1f1f1f;
-  border: 1px solid rgba(255, 255, 255, 0.75);
+  background-color: #212529;
+  border: 1px solid #343A40;
   box-sizing: border-box;
-  color: #fff;
+  color: #DEE2E6;
   cursor: pointer;
-  display: inline-block;
   font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
   font-size: 16px;
   font-weight: 700;
-  line-height: 1.5;
-  margin: 0;
   max-width: none;
   min-height: 44px;
   min-width: 10px;
   outline: none;
   overflow: hidden;
   padding: 9px 20px 8px;
-  position: relative;
   text-align: center;
-  text-transform: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
 }
 
 button:hover, button:active, button:focus {
-  opacity: .75;
+  opacity: .95;
 }

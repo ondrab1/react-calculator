@@ -1,7 +1,18 @@
 * { box-sizing: border-box; }
 
 .app {
-    margin: 25px;
+    background: #E9ECEF;
+    max-width: 500px;
+    margin: 25px auto;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.app-title {
+    font-size: 34px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
 .container {
