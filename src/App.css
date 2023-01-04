@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
+* { box-sizing: border-box; }
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.calculator {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.calculator .keys {
+    height: 50px;
+    width: 25%;
+    break-inside: avoid;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.calculator .keys button {
+    width: 100%;
+    height: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+#anomaly-keys-wrapper {
+    display: flex;
+    width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#anomaly-keys-wrapper > section:first-child {
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+}
+
+#anomaly-keys-wrapper > section:first-child > div {
+    flex: 1 0 33.33%;
+}
+
+#anomaly-keys-wrapper > section:first-child > div:nth-child(4) {
+    flex-basis: 66.67%;
+}
+
+#anomaly-keys-wrapper > section:last-child {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+#anomaly-keys-wrapper .tall {
+    width: 100%;
+    flex: 1;
+}
+
+@media (min-width: 321px) {
+    .calculator {
+        width: 320px;
+    }
 }
