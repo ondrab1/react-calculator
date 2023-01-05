@@ -1,10 +1,16 @@
 .display {
-    background: #ADB5BD;
+    background: #fff;
     font-size: 20px;
+    font-weight: bold;
     width: 100%;
     padding: 10px;
-    border: none;
-    /*border: 1px solid rgba(0, 0, 0, 0.1);*/
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    border-top: none;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
     text-align: right;
     cursor: default;
 }
