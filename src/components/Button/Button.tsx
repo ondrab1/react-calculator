@@ -9,12 +9,14 @@ interface ButtonProps {
 
 const Button = (props: ButtonProps) => {
     return (
-        <button
-            className={props.classes?.join(' ')}
-            value={props.value}
-            onClick={() => props.onClick(props.value)}>
-            {props.label}
-        </button>
+        <div className="button-container">
+            <button
+                className={props.classes?.join(' ')}
+                value={props.value}
+                onClick={() => props.onClick(props.value)}>
+                {props.label}
+            </button>
+        </div>
     );
 };
 

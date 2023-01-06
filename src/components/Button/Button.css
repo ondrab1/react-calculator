@@ -1,8 +1,13 @@
-button {
-  background-color: #212529;
-  border: 1px solid #343A40;
+.button-container {
+  padding: 1px;
+  height: 100%;
+}
+
+.button-container button {
+  background-color: #DCDCDC;
+  border: 1px solid #C0C0C0;
   box-sizing: border-box;
-  color: #DEE2E6;
+  color: #2F4F4F;
   cursor: pointer;
   font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
   font-size: 16px;
@@ -14,8 +19,11 @@ button {
   overflow: hidden;
   padding: 9px 20px 8px;
   text-align: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
 }
 
-button:hover, button:active, button:focus {
-  opacity: .95;
+.button-container button:hover, .button-container button:active, .button-container button:focus {
+  background: #D3D3D3;
 }

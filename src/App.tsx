@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import './App.css';
 import Display from "./components/Display/Display";
 import Button from "./components/Button/Button";
-import FormulaDisplay from "./components/FormulaDisplay/FormulaDisplay";
 
 const operators = ['+', '-', '*', '/'];
 
@@ -103,10 +102,8 @@ function App() {
 
             <div className="container">
                 <div className="calculator">
-                    {/* Small display where current formula is displayed */}
-                    <FormulaDisplay value={renderFormula()} />
-                    {/* Input & Result display */}
-                    <Display value={display} />
+                    {/* Input, History & Result display */}
+                    <Display value={display} history={renderFormula()} />
                     {/* Buttons */}
                     <div className="keys">
                         <Button label="C" value="c" onClick={(value) => handleAction(value)} />

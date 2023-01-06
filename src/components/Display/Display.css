@@ -1,4 +1,19 @@
-.display {
+.display-container .history-display {
+    text-align: right;
+    background: #fff;
+    width: 100%;
+    padding: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: none;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    cursor: default;
+    margin-bottom: 0;
+}
+
+.display-container .display {
     background: #fff;
     font-size: 20px;
     font-weight: bold;
@@ -9,12 +24,13 @@
     border-left: 1px solid rgba(0, 0, 0, 0.2);
     border-right: 1px solid rgba(0, 0, 0, 0.2);
     border-top: none;
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
     text-align: right;
     cursor: default;
+    margin-top: 0;
 }
 
-.display:focus {
+.display-container .display:focus, .display-container .history-display:focus {
     outline: none;
 }
