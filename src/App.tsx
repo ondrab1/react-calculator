@@ -1,8 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import 'bootstrap/dist/css/bootstrap.css'
 import './App.css';
 import Display from "./components/Display/Display";
-import Button from "./components/Button/Button";
 import Keyboard from "./components/Keyboard/Keyboard";
 
 const operators = ['+', '-', '*', '/'];
@@ -111,78 +109,16 @@ function App() {
 
     return (
         <div className="app">
-
             <div className="app-title">
                 React calculator
             </div>
 
-            <div className="calculator-container">
+            <div className="calculator-outer-container">
                 <div className="calculator">
                     {/* Input, History & Result display */}
                     <Display value={display} history={renderFormula()} />
-                    {/* TODO: Keyboard refactor */}
-                    {/*<Keyboard handler={handleAction} />*/}
-                    {/* Buttons */}
-                    <div className="keys">
-                        <Button label="C" value="c" onClick={(value) => handleAction(value)} />
-                    </div>
-                    <div className="keys">
-                        <Button label="%" value="%" onClick={(value) => handleAction(value)} />
-                    </div>
-                    <div className="keys">
-                        <Button label="/" value="/" onClick={(value) => handleAction(value)} />
-                    </div>
-                    <div className="keys">
-                        <Button label="*" value="*" onClick={(value) => handleAction(value)} />
-                    </div>
-                    <div className="keys">
-                        <Button label="7" value={7} onClick={(value) => handleAction(value)} />
-                    </div>
-                    <div className="keys">
-                        <Button label="8" value={8} onClick={(value) => handleAction(value)} />
-                    </div>
-                    <div className="keys">
-                        <Button label="9" value={9} onClick={(value) => handleAction(value)} />
-                    </div>
-                    <div className="keys">
-                        <Button label="-" value="-" onClick={(value) => handleAction(value)} />
-                    </div>
-                    <div className="keys">
-                        <Button label="4" value={4} onClick={(value) => handleAction(value)} />
-                    </div>
-                    <div className="keys">
-                        <Button label="5" value={5} onClick={(value) => handleAction(value)} />
-                    </div>
-                    <div className="keys">
-                        <Button label="6" value={6} onClick={(value) => handleAction(value)} />
-                    </div>
-                    <div className="keys">
-                        <Button label="+" value="+" onClick={(value) => handleAction(value)} />
-                    </div>
-                    <section id="anomaly-keys-wrapper">
-                        <section>
-                            <div className="keys">
-                                <Button label="1" value={1} onClick={(value) => handleAction(value)} />
-                            </div>
-                            <div className="keys">
-                                <Button label="2" value={2} onClick={(value) => handleAction(value)} />
-                            </div>
-                            <div className="keys">
-                                <Button label="3" value={3} onClick={(value) => handleAction(value)} />
-                            </div>
-                            <div className="keys long">
-                                <Button label="0" value={0} onClick={(value) => handleAction(value)} />
-                            </div>
-                            <div className="keys">
-                                <Button label="." value="." onClick={(value) => handleAction(value)} />
-                            </div>
-                        </section>
-                        <section>
-                            <div className="keys">
-                                <Button label="=" value="=" onClick={(value) => handleAction(value)} />
-                            </div>
-                        </section>
-                    </section>
+                    {/* Calculator keyboard */}
+                    <Keyboard handler={handleAction} />
                 </div>
             </div>
         </div>

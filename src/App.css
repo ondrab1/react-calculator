@@ -15,60 +15,11 @@
     margin-bottom: 50px;
 }
 
-.calculator-container {
+.calculator-outer-container {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
-}
-
-.calculator {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    width: 100%;
-}
-
-.calculator .keys {
-    height: 50px;
-    width: 25%;
-    break-inside: avoid;
-}
-
-.calculator .keys .button {
-    width: 100%;
-    height: 100%;
-}
-
-#anomaly-keys-wrapper {
-    display: flex;
-    width: 100%;
-}
-
-#anomaly-keys-wrapper > section:first-child {
-    display: flex;
-    flex-wrap: wrap;
-    width: 75%;
-}
-
-#anomaly-keys-wrapper > section:first-child > div {
-    flex: 1 0 33.33%;
-}
-
-#anomaly-keys-wrapper > section:first-child > div:nth-child(4) {
-    flex-basis: 66.67%;
-}
-
-#anomaly-keys-wrapper > section:last-child {
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-}
-
-#anomaly-keys-wrapper .tall {
-    width: 100%;
-    flex: 1;
 }
 
 @media (min-width: 321px) {

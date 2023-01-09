@@ -27,3 +27,13 @@
 .button-container button:hover, .button-container button:active, .button-container button:focus {
   background: #D3D3D3;
 }
+
+.button-container button.color-blue {
+  background: #4285F4;
+  color: #fff;
+  border: 1px solid #3079f2;
+}
+
+.button-container button.color-blue:hover, .button-container button.color-blue:active, .button-container button.color-blue:focus {
+  background: #3079f2;
+}
