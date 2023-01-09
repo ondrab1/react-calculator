@@ -1,7 +1,9 @@
 import React, {useEffect, useState} from 'react';
+import 'bootstrap/dist/css/bootstrap.css'
 import './App.css';
 import Display from "./components/Display/Display";
 import Button from "./components/Button/Button";
+import Keyboard from "./components/Keyboard/Keyboard";
 
 const operators = ['+', '-', '*', '/'];
 
@@ -28,11 +30,15 @@ function App() {
         handleAction(!isNaN(parseInt(e.key)) ? parseInt(e.key) : e.key)
     }
 
+    const getFormulaLastItem = () => {
+        return formula.at(-1);
+    }
+
     // Method that renders formula
     const renderFormula = () => {
         const formulaClone = [...formula];
 
-        const last = formulaClone.at(-1);
+        const last = getFormulaLastItem();
         // remove operator at the end of the formula
         if (last && operators.includes(last)) {
             if (display) {
@@ -62,10 +68,20 @@ function App() {
             return;
         }
 
-        // Operator button was pressed
+        // Operator button was pressed - and formula is not empty or "-" operator was pressed, cuz "-" is able to be at the beginning of the formula
         if (operators.includes(value)) {
-            // Save display value
-            formula.push(display);
+            // Save display value if any exists
+            if (display) {
+                formula.push(display);
+            }
+
+            const last = getFormulaLastItem();
+            // Last item in formula is operator, so we want to change it to another operator
+            if (last && operators.includes(last)) {
+                // Remove current operator and replace it by pressed operator below
+                formula.pop();
+            }
+
             // Save operator that should be used
             formula.push(value);
             // Update react state - set formula
@@ -100,10 +116,12 @@ function App() {
                 React calculator
             </div>
 
-            <div className="container">
+            <div className="calculator-container">
                 <div className="calculator">
                     {/* Input, History & Result display */}
                     <Display value={display} history={renderFormula()} />
+                    {/* TODO: Keyboard refactor */}
+                    {/*<Keyboard handler={handleAction} />*/}
                     {/* Buttons */}
                     <div className="keys">
                         <Button label="C" value="c" onClick={(value) => handleAction(value)} />
@@ -160,7 +178,7 @@ function App() {
                             </div>
                         </section>
                         <section>
-                            <div className="keys tall">
+                            <div className="keys">
                                 <Button label="=" value="=" onClick={(value) => handleAction(value)} />
                             </div>
                         </section>
