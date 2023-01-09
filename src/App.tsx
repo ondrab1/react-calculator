@@ -80,8 +80,10 @@ function App() {
                 formula.pop();
             }
 
-            // Save operator that should be used
-            formula.push(value);
+            // Save operator that should be used - operator should be saved only if there is some number in formula
+            if (formula.length) {
+                formula.push(value);
+            }
             // Update react state - set formula
             setFormula(formula);
             // Update react state - reset display
@@ -94,6 +96,14 @@ function App() {
             case 'c':
                 setDisplay('');
                 setFormula([]);
+                break;
+            // +/- conversion    
+            case '+/-':
+                setDisplay((parseFloat(display) * -1).toString());
+                break;
+            // convert to percentages
+            case '%':
+                setDisplay((parseFloat(display) / 100).toString());
                 break;
             case '=':
             case 'Enter':
