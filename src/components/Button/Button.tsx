@@ -8,12 +8,17 @@ interface ButtonProps {
 }
 
 const Button = (props: ButtonProps) => {
+    const handleButtonClick = (e: any, value: string|number) => {
+        e.target.blur();
+        props.onClick(value);
+    }
+
     return (
         <div className="button-container">
             <button
                 className={props.classes?.join(' ')}
                 value={props.value}
-                onClick={() => props.onClick(props.value)}>
+                onClick={(e) => handleButtonClick(e, props.value)}>
                 {props.label}
             </button>
         </div>

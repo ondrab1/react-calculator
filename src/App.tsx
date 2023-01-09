@@ -70,7 +70,7 @@ function App() {
         if (operators.includes(value)) {
             // Save display value if any exists
             if (display) {
-                formula.push(display);
+                formula.push(parseFloat(display).toString());
             }
 
             const last = getFormulaLastItem();
@@ -94,6 +94,7 @@ function App() {
         switch (value) {
             // Reset display and formula memory
             case 'c':
+            case 'Delete':
                 setDisplay('');
                 setFormula([]);
                 break;

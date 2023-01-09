@@ -11,7 +11,7 @@ const Keyboard = ({ handler }: KeyboardProps) => {
         <div className="container">
             <div className="row">
                 <div className="col p-0">
-                    <Button label="C" value="c" onClick={(value) => handler(value)}/>
+                    <Button classes={['color-red']} label="C" value="c" onClick={(value) => handler(value)}/>
                 </div>
                 <div className="col p-0">
                     <Button label="+/-" value="+/-" onClick={(value) => handler(value)}/>
