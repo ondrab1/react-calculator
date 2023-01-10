@@ -12,6 +12,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
+      - name: Setup git config
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "<>"
       - name: Install dependencies
         run: npm i
       - name: Deploy
