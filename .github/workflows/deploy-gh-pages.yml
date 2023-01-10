@@ -12,5 +12,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - name: deploy
+      - name: Install dependencies
+        run: npm i
+      - name: Deploy
         run: npm run deploy
