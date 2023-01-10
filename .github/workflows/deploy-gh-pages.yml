@@ -8,15 +8,15 @@ jobs:
   deploy-gh-pages:
     runs-on: 'ubuntu-latest'
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-      - name: Setup git config
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install and Build 🔧
         run: |
-          git config user.name "GitHub Actions"
-          git config user.email "<>"
-      - name: Install dependencies
-        run: npm i
+          npm i
+          npm run build
+
       - name: Deploy
-        run: npm run deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build
