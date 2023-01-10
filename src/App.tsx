@@ -100,11 +100,15 @@ function App() {
                 break;
             // +/- conversion    
             case '+/-':
-                setDisplay((parseFloat(display) * -1).toString());
+                if (display) {
+                    setDisplay((parseFloat(display) * -1).toString());
+                }
                 break;
             // convert to percentages
             case '%':
-                setDisplay((parseFloat(display) / 100).toString());
+                if (display) {
+                    setDisplay((parseFloat(display) / 100).toString());
+                }
                 break;
             case '=':
             case 'Enter':
