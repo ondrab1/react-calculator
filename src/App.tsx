@@ -1,3 +1,4 @@
+/* eslint no-eval: 0 */
 import React, {useEffect, useState} from 'react';
 import './App.css';
 import Display from "./components/Display/Display";
